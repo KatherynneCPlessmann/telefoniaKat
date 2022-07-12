@@ -1,0 +1,45 @@
+<%- contentFor('body') %>
+<h1 class= "factura">Factura</h1>
+<div class="row" id="cc">
+    <div class="col-12" id="cc">
+        <h4 class="tec">Compañía:</h4> 
+    </div>
+    <div class="col-12 ">
+        <img class="imgTel" src="../img/telcel.png" alt=""> 
+        <p class="text-justify">
+        <b>Nombre: </b> Radiomóvil Dipsa S.A. de C.V. <br>
+        <b>Sucursal: </b>  Plaza Coronado. <br>
+        <b>Dirección: </b> Av. Ensenada No. 24 Esq, Paseo Playas de Tijuana, Playas De Tijuana, 22200 Tijuana, B.C. <br>
+        <b>N° factura: </b>  0123 <br><b>Código: </b>  23-34344343-2</p>
+    </div>
+
+    <div class="row" id="cc">
+        <div class="col-12">
+            <h4 class="tec">Cliente:</h4> 
+        </div>
+        <div class="col-12">
+            <p class="text-justify"> 
+                <b>Nombre Completo: </b> <%- nombre %> <br>
+                <b>Correo: </b><%- correo %> <br>
+                <b>Número:</b> <%- numero %> <br>
+                <b>Dirección:</b> <%- dir %> 
+            </p>
+        </div>
+    </div>
+
+</div>
+<div class="row" >
+    <div class="col-12">
+        <h4 class="tec">Pedido:</h4> 
+    </div>
+    <div class="col"><b>Modelo: </b> <%- modelo %> <br> <b>Color: </b> <%- color %> </div>
+    <div class="col"><b>Precio:</b> $ <%- precio %> MXN</div>
+    <div class="col"><b>Cantidad:</b> <%- c %> </div>
+    <div class="col"><b>Plan:</b> <%- plan %> </div>
+</div>
+<div class="row">
+    <div class="col"><b>Subtotal: </b>  $  <%- subtotal %>  MXN</div>
+    <div class="col"><b>IVA: </b> $ <%- impuesto %>  MXN</div>
+    <div class="col"><b>Total: </b> $ <%- total %>  MXN</div>
+    <div class="col"><img class="codi" src="../img/cod.png" alt=""></div>
+</div>

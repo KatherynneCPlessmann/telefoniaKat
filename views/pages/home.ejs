@@ -1,0 +1,49 @@
+<%- contentFor('basic') %>
+<section class="basic">
+
+    <div class="basic-content">
+      <h2>“Donde el futuro no sólo se imagina, sino se crea”</h2>
+
+      <a href="/venta" class="btn btn-lg btn-warning">Teléfonos y Smartphones</a>
+
+    </div>
+
+  </section>
+  <%- contentFor('body') %>
+<article class="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1 class="text-center">Historia</h1>
+          <p class="text-justify">Telcel forma parte de América Móvil, empresa líder en servicios integrados de telecomunicaciones en Latinoamérica. <br>
+            América Móvil está presente en 25 países de América y Europa.
+            <br><br>
+            Con 31 años de experiencia, Telcel es la empresa líder de telecomunicaciones y servicios de valor agregado en México, cubriendo a más del 95% de la población, lo que representa más de 76 millones de usuarios.
+          </p>
+          <br><br>
+          <h1 class="text-center">Fortalezas:</h1>
+          <hr>
+          <h5>Cobertura</h5>
+          <p class="text-justify">Contamos con la mayor cobertura nacional, estando presentes en más de 225 mil poblaciones, así como en al menos 110 mil kilómetros de ejes carreteros.</p>
+          <hr>
+          <h5>Las mejores promociones</h5>
+          <p class="text-justify">Ofrecemos una gran variedad de planes y paquetes acordes a tus necesidades de comunicación.</p>
+          <hr>
+          <h5>Tecnología</h5>
+          <p class="text-justify">Ponemos al alcance de nuestros clientes la Red Telcel 4.5G; una evolución tecnología de LTE que potencia la experiencia del usuario en navegación y descarga de contenidos a una velocidad hasta 10 veces más rápido que una red 4G.</p>
+          <hr>
+          <h5>Calidad</h5>
+          <p class="text-justify"> Brindamos la mejor experiencia a nuestros usuarios con calidad de servicio y atención personalizada, a través de nuestras redes sociales, la aplicación Mi Telcel, nuestra página en línea www.telcel.com y de forma personalizada en los más de 410 Centros de Atención a Clientes (CAC) y más de 42 mil puntos de venta a lo largo del país.</p>
+      </div>
+      <div class="col-sm-6">
+        <% for (elemento of publicidad ) { %>
+            <div class="row">
+            <h3 id= "pHome" class="lead"><%= elemento.aliento %></h3>
+                <img src="<%= elemento.avatar %>" id="pH" class= "img-fluid" >
+                <br><br>
+            </div>
+        <% } %>
+        </div>
+  </div>
+</article>
+

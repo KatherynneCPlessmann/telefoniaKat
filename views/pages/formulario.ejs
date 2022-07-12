@@ -1,0 +1,85 @@
+<body>
+<div class= "jumbotron text-center"> 
+    <h1 class= "text-primary font-weight-bold" id="calculadora">Rellene los siguientes campos para seguir con la compra</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Titular de la Línea</h3>
+            <p class="lead text-justify">
+                Todos los campos con * son obligatorios
+            </p>
+            <form name="inputForm" action="/datosP" method="POST">
+                <div class="form-group row">
+                    
+                    <label class="col-form-label">* Nombre completo:</label>
+                    <input type="text" class="form-control"  name="nombre" required placeholder="Ej: José Francisco Doldan Crúz">
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">* Correo Electrónico</label>
+                    <input type="text" class="form-control" name="correo" required placeholder="ejemplo@gmail.com">
+                    <h5 class="blockquote-footer">Solo correos de gmail.com</h5>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label">* Número</label>
+                    <input type="text" class="form-control" name="numero" required placeholder="664-1236578">
+                </div>
+                <div class="form-group row">
+                    
+                    <label class="col-form-label">* Dirección:</label>
+                    <input type="text" class="form-control" name="dir" required placeholder="Ej: Av. Paseo 9350. Zona Urbana Río CP 22010, Tijuana, B. C.">
+                </div>
+                <div class="form-group row">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Cantidad que desea comprar: </label>
+                        <select name= "canti" class="custom-select mr-sm-2" id="inlineFormCustomSelectc2" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <p class="blockquote-footer">Solo puede adquirirse hasta un máximo de 10 teléfonos por compra. <br>
+                        Si desea obtener más, primero comuniquese con su banco y luego asista a una sucursal.</p>
+                </div>
+                <div class="form-group row">  
+                <label class="col-form-label">Precio:</label>
+                <input type="number" value= "<%- precio %>" readonly="readonly" class="form-control" name="precio">
+                </div>
+                <div class="form-group row">  
+                    <label class="col-form-label">Modelo:</label>
+                    <input type="text" value= "<%- modelo %>" readonly="readonly" class="form-control" name="modelo">
+                </div>
+                <div class="form-group row">  
+                    <label class="col-form-label">Color:</label>
+                    <input type="text" value= "<%- color %>" readonly="readonly" class="form-control" name="color">
+                </div>
+                <div class="form-group row">  
+                    <label class="col-form-label">Plan:</label>
+                    <input type="text" value= "<%- plan %>" readonly="readonly" class="form-control" name="plan">
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" >
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <% for (elemento of publicidad ) { %>
+                <div class="row">
+                <h3 id= "alineacion" class="lead"><%= elemento.aliento %></h3>
+                    <img src="<%= elemento.avatar %>" id="publi"  >
+                    <br><br>
+                <h5 id= "alineacion" class="blockquote-footer"><%= elemento.aviso %></h5>
+                </div>
+            <% } %>
+            </div>
+            
+    </div>
+
+</div>
+</body>
+
